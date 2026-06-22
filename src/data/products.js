@@ -1,5 +1,14 @@
-const lf = (w, h, kw, lock) =>
-  `https://loremflickr.com/${w}/${h}/${kw}?lock=${lock}`;
+// 4 foto locali — sostituibili con le foto reali del cliente in /src/assets/
+import imgHero    from '../assets/img-hero.jpg';
+import imgProduct from '../assets/img-product.jpg';
+import imgNature  from '../assets/img-nature.jpg';
+import imgGear    from '../assets/img-gear.jpg';
+
+const lf = (_w, _h, _kw, lock) =>
+  lock <= 13 ? imgHero :
+  lock <= 41 ? imgProduct :
+  lock <= 67 ? imgGear :
+  imgNature;
 
 export const heroSlides = [
   {

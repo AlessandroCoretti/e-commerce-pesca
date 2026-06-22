@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 
 import { CartProvider } from './context/CartContext';
+import ScrollToTop from './components/ScrollToTop';
 import TopBar from './components/TopBar';
 import Header from './components/Header';
 import Navigation, { MobileNav } from './components/Navigation';
@@ -20,6 +21,7 @@ function AppShell() {
 
   return (
     <>
+      <ScrollToTop />
       <TopBar />
       <Header onOpenMenu={() => setMobileMenuOpen(true)} />
       <Navigation />

@@ -2,13 +2,18 @@ import { useState, useRef } from 'react';
 
 // Sostituisci gli youtubeId con gli ID reali dei vostri video YouTube
 // Es: se il link è youtube.com/watch?v=dQw4w9WgXcQ → youtubeId: 'dQw4w9WgXcQ'
+import imgNature from '../assets/img-nature.jpg';
+import imgHero   from '../assets/img-hero.jpg';
+const T1 = imgNature;
+const T2 = imgHero;
+
 const videos = [
-  { id: 1, youtubeId: 'INSERISCI_ID_1', title: 'Giornata di pesca sul lago', thumb: 'https://loremflickr.com/400/711/fishing,lake?lock=101' },
-  { id: 2, youtubeId: 'INSERISCI_ID_2', title: 'Luccio da record!',          thumb: 'https://loremflickr.com/400/711/fishing,pike?lock=102' },
-  { id: 3, youtubeId: 'INSERISCI_ID_3', title: 'Tecnica spinning sul fiume', thumb: 'https://loremflickr.com/400/711/fishing,river?lock=103' },
-  { id: 4, youtubeId: 'INSERISCI_ID_4', title: 'Pesca alla carpa notturna',  thumb: 'https://loremflickr.com/400/711/fishing,carp?lock=104'  },
-  { id: 5, youtubeId: 'INSERISCI_ID_5', title: 'Uscita in kayak al tramonto',thumb: 'https://loremflickr.com/400/711/kayak,fishing?lock=105' },
-  { id: 6, youtubeId: 'INSERISCI_ID_6', title: 'Montaggio esca perfetto',    thumb: 'https://loremflickr.com/400/711/fishing,lure?lock=106'  },
+  { id: 1, youtubeId: 'INSERISCI_ID_1', title: 'Giornata di pesca sul lago', thumb: T1 },
+  { id: 2, youtubeId: 'INSERISCI_ID_2', title: 'Luccio da record!',          thumb: T2 },
+  { id: 3, youtubeId: 'INSERISCI_ID_3', title: 'Tecnica spinning sul fiume', thumb: T1 },
+  { id: 4, youtubeId: 'INSERISCI_ID_4', title: 'Pesca alla carpa notturna',  thumb: T2 },
+  { id: 5, youtubeId: 'INSERISCI_ID_5', title: 'Uscita in kayak al tramonto',thumb: T1 },
+  { id: 6, youtubeId: 'INSERISCI_ID_6', title: 'Montaggio esca perfetto',    thumb: T2 },
 ];
 
 function PlayIcon() {
